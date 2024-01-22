@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "ft": "fungible_token.meta.txt",
+    "ls": "liquid_stake.meta.txt"
+  },
+  "testnet": {
+    "network": "wss://testnet.vara-network.io",
+    "ls_address": "0x604379d79c45a4ef9e66d0ea4745e7f413dc58ccda7aa73653ddb1090c22712e",
+    "ft_address": "0xe609506126c6eedd004d964396c52668420916c7f0164af50b40652175ca2641",
+  },
+  "mainnet": {
+    "network": "wss://rpc.vara.network",
+    "ls_address": "",
+    "ft_address": ""
+  }
+}
