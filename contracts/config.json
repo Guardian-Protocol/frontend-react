@@ -1,6 +1,6 @@
 {
   "testnet": {
-    "network": "wss://testnet.vara-network.io",
+    "network": "wss://testnet.vara.network",
     "fungible_token": {
       "address": "0x1374ebdd95a9f4825fb3fa0bebb265f5ee81bc24a80f4adeba4ba1c608c56eb9",
       "metadata": "fungible_token.meta.txt",
