@@ -2,11 +2,11 @@ FROM node:latest
 
 WORKDIR /app
 
-# RUN git clone https://github.com/EpsyUwU/GUARDIAN_PROTOCOL_NEW.git .
-
-COPY . .
+COPY yarn.lock .eslintrc.js package.json tsconfig.json config-overrides.js .
 
 RUN yarn install
+
+COPY . .
 
 EXPOSE 3000
 
