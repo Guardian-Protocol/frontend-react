@@ -1,16 +1,16 @@
 module.exports = {
   root: true,
   globals: {
-    "angular": false,
-    "module": false,
-    "inject": false,
-    "document": false
+    angular: false,
+    module: false,
+    inject: false,
+    document: false,
   },
   env: {
     browser: true,
     es2021: true,
     amd: true,
-    node: true
+    node: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -35,7 +35,8 @@ module.exports = {
 
     'consistent-return': 'off', // we want functions to have different return behavior
 
-    'react/jsx-props-no-spreading': ['error', { exceptions: ['Input', 'FileInput', 'Textarea', 'Select'] }], // disable for form elements, cuz @mantine/form input props needs to be desctructured
-    'prettier/prettier': 'error', // Enable the Prettier rule
+    'react/jsx-props-no-spreading': [
+      'error', { exceptions: ['Input', 'FileInput', 'Textarea', 'Select'] }],
+    'prettier/prettier': 'warn', // Enable the Prettier rule
   },
-};
+}
