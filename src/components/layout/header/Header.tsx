@@ -10,21 +10,10 @@ type Props = {
 
 function Header({ isAccountVisible }: Props) {
   return (
-    <Box
-      w="100%"
-      pl={90}
-      pr={90}
-      className={styles.header}
-      backgroundColor="#F9B830"
-    >
+    <Box w="100%" pl={90} pr={90} className={styles.header} backgroundColor="#F9B830">
       <h1>
         <Link to="/">
-          <Image
-            src={GuardianLogo}
-            width="17%"
-            alt="Logo"
-            className={styles.logo}
-          />
+          <Image src={GuardianLogo} width="17%" alt="Logo" className={styles.logo} />
         </Link>
       </h1>
       {isAccountVisible && <Account />}

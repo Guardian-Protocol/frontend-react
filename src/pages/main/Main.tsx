@@ -33,12 +33,7 @@ function Main() {
             <Flex direction="row" gap="250">
               <HStack>
                 <VStack align="start" spacing={5}>
-                  <Heading
-                    size="4xl"
-                    textColor="black"
-                    textAlign="left"
-                    fontWeight="semibold"
-                  >
+                  <Heading size="4xl" textColor="black" textAlign="left" fontWeight="semibold">
                     Liquid Staking <br /> Protocol
                   </Heading>
                   <Text textColor="black" fontSize="3xl">

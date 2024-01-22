@@ -45,8 +45,7 @@ function Home() {
   const Localbalances = fullState.balances || []
 
   // Add your programID
-  const programIDFT =
-    '0xe609506126c6eedd004d964396c52668420916c7f0164af50b40652175ca2641'
+  const programIDFT = '0xe609506126c6eedd004d964396c52668420916c7f0164af50b40652175ca2641'
 
   // Add your metadata.txt
   const metaFT =
@@ -79,8 +78,7 @@ function Home() {
   const [stakeamount, setStakeamount] = useState<any | undefined>(0)
 
   // Add your programID
-  const programID =
-    '0x604379d79c45a4ef9e66d0ea4745e7f413dc58ccda7aa73653ddb1090c22712e'
+  const programID = '0x604379d79c45a4ef9e66d0ea4745e7f413dc58ccda7aa73653ddb1090c22712e'
 
   // Add your metadata.txt
   const meta =
@@ -123,24 +121,18 @@ function Home() {
 
         const injector = await web3FromSource(accounts[0].meta.source)
         transferExtrinsic
-          .signAndSend(
-            accounts[0].address,
-            { signer: injector.signer },
-            ({ status }: any) => {
-              if (status.isInBlock) {
-                console.log(
-                  `Completed at block hash #${status.asInBlock.toString()}`,
-                )
-                alert.success(`Block hash #${status.asInBlock.toString()}`)
-              } else {
-                console.log(`Current status: ${status.type}`)
-                if (status.type === 'Finalized') {
-                  alert.success(status.type)
-                  setStakeamount(0)
-                }
+          .signAndSend(accounts[0].address, { signer: injector.signer }, ({ status }: any) => {
+            if (status.isInBlock) {
+              console.log(`Completed at block hash #${status.asInBlock.toString()}`)
+              alert.success(`Block hash #${status.asInBlock.toString()}`)
+            } else {
+              console.log(`Current status: ${status.type}`)
+              if (status.type === 'Finalized') {
+                alert.success(status.type)
+                setStakeamount(0)
               }
-            },
-          )
+            }
+          })
           .catch((error: any) => {
             console.log(':( transaction failed', error)
           })
@@ -214,11 +206,7 @@ function Home() {
           </TabList>
 
           <TabPanels>
-            <TabPanel
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-            >
+            <TabPanel display="flex" justifyContent="center" alignItems="center">
               <TableContainer>
                 <Table
                   variant="simple"
@@ -231,21 +219,13 @@ function Home() {
                 >
                   <Tbody>
                     <Grid templateColumns="1fr auto" gap="10">
-                      <Tr
-                        id="espacio"
-                        style={{ marginBottom: '3px !important' }}
-                      >
+                      <Tr id="espacio" style={{ marginBottom: '3px !important' }}>
                         <Td fontSize="18px" style={{ color: 'white' }}>
                           Amount
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         Available: {account?.balance.value} VARA
                       </Td>
                     </Grid>
@@ -253,11 +233,7 @@ function Home() {
                     <Grid templateColumns="1fr auto" gap="1">
                       <Td position="revert">
                         <InputGroup size="lg">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            paddingTop="10px"
-                            w="90px"
-                          >
+                          <InputLeftElement pointerEvents="none" paddingTop="10px" w="90px">
                             <Image src={VaraLogo} h="60px" w="60px" />
                           </InputLeftElement>
                           <Input
@@ -289,10 +265,7 @@ function Home() {
                               }
                             }}
                           />
-                          <InputRightElement
-                            paddingRight="20px"
-                            paddingTop="10px"
-                          >
+                          <InputRightElement paddingRight="20px" paddingTop="10px">
                             <Button
                               h="60px"
                               size="lg"
@@ -312,11 +285,7 @@ function Home() {
 
                     <Grid templateColumns="1fr auto" gap="1">
                       <Tr textColor="white">
-                        <Td
-                          fontSize="18px"
-                          fontWeight="bold"
-                          style={{ color: 'white' }}
-                        >
+                        <Td fontSize="18px" fontWeight="bold" style={{ color: 'white' }}>
                           You will recieve
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
@@ -345,12 +314,7 @@ function Home() {
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         4.00%
                       </Td>
                     </Grid>
@@ -362,12 +326,7 @@ function Home() {
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         0.0%
                       </Td>
                     </Grid>
@@ -379,22 +338,12 @@ function Home() {
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         10%
                       </Td>
                     </Grid>
 
-                    <Td
-                      width="100%"
-                      display="flex"
-                      justifyContent="center"
-                      alignItems="center"
-                    >
+                    <Td width="100%" display="flex" justifyContent="center" alignItems="center">
                       <Button
                         colorScheme="teal"
                         size="lg"
@@ -413,11 +362,7 @@ function Home() {
               </TableContainer>
             </TabPanel>
 
-            <TabPanel
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-            >
+            <TabPanel display="flex" justifyContent="center" alignItems="center">
               <TableContainer>
                 <Table
                   variant="simple"
@@ -430,21 +375,13 @@ function Home() {
                 >
                   <Tbody>
                     <Grid templateColumns="1fr auto" gap="1">
-                      <Tr
-                        id="espacio"
-                        style={{ marginBottom: '3px !important' }}
-                      >
+                      <Tr id="espacio" style={{ marginBottom: '3px !important' }}>
                         <Td fontSize="18px" style={{ color: 'white' }}>
                           Amount
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         Available: {gVARAbalance} gVARA
                       </Td>
                     </Grid>
@@ -452,15 +389,8 @@ function Home() {
                     <Grid templateColumns="1fr auto" gap="1">
                       <Td position="revert">
                         <InputGroup size="lg">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            paddingTop="10px"
-                            w="90px"
-                          >
-                            <Text
-                              fontFamily="'Consolas', italic"
-                              color="turquoise"
-                            >
+                          <InputLeftElement pointerEvents="none" paddingTop="10px" w="90px">
+                            <Text fontFamily="'Consolas', italic" color="turquoise">
                               g
                             </Text>
                             <Image src={VaraLogo} h="60px" w="60px" />
@@ -494,10 +424,7 @@ function Home() {
                               }
                             }}
                           />
-                          <InputRightElement
-                            paddingRight="20px"
-                            paddingTop="10px"
-                          >
+                          <InputRightElement paddingRight="20px" paddingTop="10px">
                             <Button
                               h="60px"
                               size="lg"
@@ -517,16 +444,10 @@ function Home() {
 
                     <Grid templateColumns="1fr auto" gap="4">
                       <Tr textColor="white">
-                        <Td
-                          fontSize="18px"
-                          fontWeight="bold"
-                          style={{ color: 'white' }}
-                        >
+                        <Td fontSize="18px" fontWeight="bold" style={{ color: 'white' }}>
                           You will recieve
                         </Td>
-                        <Td style={{ visibility: 'hidden', color: 'white' }}>
-                          .
-                        </Td>
+                        <Td style={{ visibility: 'hidden', color: 'white' }}>.</Td>
                       </Tr>
                       <Td
                         isNumeric
@@ -550,16 +471,9 @@ function Home() {
                         <Td fontSize="18px" style={{ color: 'white' }}>
                           Total Balance
                         </Td>
-                        <Td style={{ visibility: 'hidden', color: 'white' }}>
-                          .
-                        </Td>
+                        <Td style={{ visibility: 'hidden', color: 'white' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         4.00%
                       </Td>
                     </Grid>
@@ -571,12 +485,7 @@ function Home() {
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         0.0%
                       </Td>
                     </Grid>
@@ -588,12 +497,7 @@ function Home() {
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         10%
                       </Td>
                     </Grid>
@@ -617,11 +521,7 @@ function Home() {
               </TableContainer>
             </TabPanel>
 
-            <TabPanel
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-            >
+            <TabPanel display="flex" justifyContent="center" alignItems="center">
               <TableContainer>
                 <Table
                   variant="simple"
@@ -634,21 +534,13 @@ function Home() {
                 >
                   <Tbody>
                     <Grid templateColumns="1fr auto" gap="4">
-                      <Tr
-                        id="espacio"
-                        style={{ marginBottom: '3px !important' }}
-                      >
+                      <Tr id="espacio" style={{ marginBottom: '3px !important' }}>
                         <Td fontSize="18px" style={{ color: 'white' }}>
                           Amount
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         Available: {gVARAbalance} gVARA
                       </Td>
                     </Grid>
@@ -656,11 +548,7 @@ function Home() {
                     <Grid templateColumns="1fr auto" gap="1">
                       <Td position="revert">
                         <InputGroup size="lg">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            paddingTop="10px"
-                            w="90px"
-                          >
+                          <InputLeftElement pointerEvents="none" paddingTop="10px" w="90px">
                             <Image src={VaraLogo} h="60px" w="60px" />
                           </InputLeftElement>
                           <Input
@@ -692,10 +580,7 @@ function Home() {
                               }
                             }}
                           />
-                          <InputRightElement
-                            paddingRight="20px"
-                            paddingTop="10px"
-                          >
+                          <InputRightElement paddingRight="20px" paddingTop="10px">
                             <Button
                               h="60px"
                               size="lg"
@@ -726,12 +611,7 @@ function Home() {
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         4.00%
                       </Td>
                     </Grid>
@@ -743,12 +623,7 @@ function Home() {
                         </Td>
                         <Td style={{ visibility: 'hidden' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         0.0%
                       </Td>
                     </Grid>
@@ -758,16 +633,9 @@ function Home() {
                         <Td fontSize="18px" style={{ color: 'white' }}>
                           Available
                         </Td>
-                        <Td style={{ visibility: 'hidden', color: 'white' }}>
-                          .
-                        </Td>
+                        <Td style={{ visibility: 'hidden', color: 'white' }}>.</Td>
                       </Tr>
-                      <Td
-                        fontSize="18px"
-                        isNumeric
-                        textAlign="end"
-                        style={{ color: 'white' }}
-                      >
+                      <Td fontSize="18px" isNumeric textAlign="end" style={{ color: 'white' }}>
                         10%
                       </Td>
                     </Grid>

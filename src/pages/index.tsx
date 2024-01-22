@@ -9,9 +9,7 @@ const routes = [
 
 function Routing() {
   const getRoutes = () =>
-    routes.map(({ path, Page }) => (
-      <Route key={path} path={path} element={<Page />} />
-    ))
+    routes.map(({ path, Page }) => <Route key={path} path={path} element={<Page />} />)
 
   return <Routes>{getRoutes()}</Routes>
 }

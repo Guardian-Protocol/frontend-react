@@ -89,12 +89,7 @@ function Section5() {
             </Button>
           </HStack>
         </VStack>
-        <Divider
-          orientation="vertical"
-          borderColor="black"
-          ml={160}
-          height="170px"
-        />
+        <Divider orientation="vertical" borderColor="black" ml={160} height="170px" />
         <VStack alignItems="center" spacing={5}>
           <Heading size="lg" textColor="black">
             Supporters
