@@ -1,16 +1,28 @@
 {
-  "metadata": {
-    "ft": "fungible_token.meta.txt",
-    "ls": "liquid_stake.meta.txt",
-  },
   "testnet": {
     "network": "wss://testnet.vara-network.io",
-    "ft_address": "0x1374ebdd95a9f4825fb3fa0bebb265f5ee81bc24a80f4adeba4ba1c608c56eb9",
-    "ls_address": "0x8868e5e925f6c82e118f7c5c70bbe98b30fa45ebc7d0ddf22d26b0047e9aa0ea",
+    "fungible_token": {
+      "address": "0x1374ebdd95a9f4825fb3fa0bebb265f5ee81bc24a80f4adeba4ba1c608c56eb9",
+      "metadata": "fungible_token.meta.txt",
+      "gas_limit": 899819245,
+    },
+    "liquid_stake": {
+      "address": "0x8868e5e925f6c82e118f7c5c70bbe98b30fa45ebc7d0ddf22d26b0047e9aa0ea",
+      "metadata": "liquid_stake.meta.txt",
+      "gas_limit": 899819245,
+    },
   },
   "mainnet": {
     "network": "wss://rpc.vara.network",
-    "ft_address": "",
-    "ls_address": "",
+    "fungible_token": {
+      "address": "",
+      "metadata": "fungible_token.meta.txt",
+      "gas_limit": 899819245,
+    },
+    "liquid_stake": {
+      "address": "",
+      "metadata": "liquid_stake.meta.txt",
+      "gas_limit": 899819245,
+    },
   },
 }
