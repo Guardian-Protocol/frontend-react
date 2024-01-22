@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d704e5ca.css",
+    "main.js": "/static/js/main.2733bfc5.js",
+    "static/media/XBackground.svg": "/static/media/XBackground.ac976c82442e02055fa4cd79c6aedf0d.svg",
+    "static/media/GuardianBlack.png": "/static/media/GuardianBlack.a5eb1ddc7dc5bdb4d1a5.png",
+    "static/media/VaraLogo.png": "/static/media/VaraLogo.0144a5bf5ca258e91171.png",
+    "static/media/DotGrid.png": "/static/media/DotGrid.e365bd2e7058d4a26259.png",
+    "static/media/gear.svg": "/static/media/gear.d1bda9569a9840e95db3.svg",
+    "static/media/discord.svg": "/static/media/discord.526ab74eaf7406bd14b2ea524b1690fb.svg",
+    "static/media/github.svg": "/static/media/github.d27d86883a60bd746f8cbed0515442c4.svg",
+    "static/media/twitter.svg": "/static/media/twitter.21e10f6b8e647ce1f27e42a8d0ad31a8.svg",
+    "static/media/medium.svg": "/static/media/medium.a55230a9a6d6d31159680e98d0161368.svg",
+    "index.html": "/index.html",
+    "main.d704e5ca.css.map": "/static/css/main.d704e5ca.css.map",
+    "main.2733bfc5.js.map": "/static/js/main.2733bfc5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d704e5ca.css",
+    "static/js/main.2733bfc5.js"
+  ]
+}
