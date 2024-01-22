@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
-import { Image } from "@chakra-ui/react";
-
+import { motion } from 'framer-motion'
+import { Image } from '@chakra-ui/react'
 
 function HoverEffect() {
   return (
@@ -12,7 +11,7 @@ function HoverEffect() {
         src="http://guardiandefi.xyz/wp-content/uploads/2023/09/CoinGuardian.png"
       />
     </motion.div>
-  );
+  )
 }
 
-export { HoverEffect };
+export { HoverEffect }

@@ -1,3 +1,3 @@
-import { AccountsModal } from './AccountsModal';
+import { AccountsModal } from './AccountsModal'
 
-export { AccountsModal };
+export { AccountsModal }

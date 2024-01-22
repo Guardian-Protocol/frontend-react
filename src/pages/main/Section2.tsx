@@ -1,32 +1,32 @@
-import { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { HStack, Heading, Box, Flex, Image } from "@chakra-ui/react";
+import { useEffect, useRef } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { HStack, Heading, Box, Flex, Image } from '@chakra-ui/react'
 
 function Section2() {
-  const controls = useAnimation();
-  const ref: any = useRef();
+  const controls = useAnimation()
+  const ref: any = useRef()
 
   useEffect(() => {
-    const element: any = ref.current;
+    const element: any = ref.current
 
     const handleScroll = () => {
-      const { scrollY } = window;
-      const elementTop = element.offsetTop;
-      const windowHeight = window.innerHeight;
+      const { scrollY } = window
+      const elementTop = element.offsetTop
+      const windowHeight = window.innerHeight
 
       if (scrollY + windowHeight > elementTop) {
-        controls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } });
+        controls.start({ opacity: 1, y: 0, transition: { duration: 0.5 } })
       } else {
-        controls.start({ opacity: 0, y: 100 });
+        controls.start({ opacity: 0, y: 100 })
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [controls]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [controls])
 
   return (
     <motion.div
@@ -34,7 +34,11 @@ function Section2() {
       initial={{ opacity: 0, y: 100 }}
       animate={controls}
       className="scroll-appear-element"
-      style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
     >
       <HStack>
         <Flex gap="10px">
@@ -45,12 +49,15 @@ function Section2() {
           />
           <HStack>
             <Box w="150px" />
-            <Heading size="3xl"  textColor="black"> How Guardian works?</Heading>
+            <Heading size="3xl" textColor="black">
+              {' '}
+              How Guardian works?
+            </Heading>
           </HStack>
         </Flex>
       </HStack>
     </motion.div>
-  );
+  )
 }
 
-export { Section2 };
+export { Section2 }
