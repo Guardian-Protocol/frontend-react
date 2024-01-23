@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/frontend-react/static/css/main.3f6329ff.css",
-    "main.js": "/frontend-react/static/js/main.e65a889a.js",
+    "main.js": "/frontend-react/static/js/main.bd0c79f5.js",
     "static/media/XBackground.svg": "/frontend-react/static/media/XBackground.ac976c82442e02055fa4cd79c6aedf0d.svg",
     "static/media/GuardianBlack.png": "/frontend-react/static/media/GuardianBlack.a5eb1ddc7dc5bdb4d1a5.png",
     "static/media/VaraLogo.png": "/frontend-react/static/media/VaraLogo.0144a5bf5ca258e91171.png",
@@ -13,10 +13,10 @@
     "static/media/medium.svg": "/frontend-react/static/media/medium.a55230a9a6d6d31159680e98d0161368.svg",
     "index.html": "/frontend-react/index.html",
     "main.3f6329ff.css.map": "/frontend-react/static/css/main.3f6329ff.css.map",
-    "main.e65a889a.js.map": "/frontend-react/static/js/main.e65a889a.js.map"
+    "main.bd0c79f5.js.map": "/frontend-react/static/js/main.bd0c79f5.js.map"
   },
   "entrypoints": [
     "static/css/main.3f6329ff.css",
-    "static/js/main.e65a889a.js"
+    "static/js/main.bd0c79f5.js"
   ]
 }
